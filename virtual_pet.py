@@ -2,7 +2,6 @@ import random, ctypes
 from tkinter import *
 
 x = 900 #x value defines cat's initial x axis position
-print(x)
 cycle = 0
 check = 1
 idle_num = [1, 2, 3, 4]
