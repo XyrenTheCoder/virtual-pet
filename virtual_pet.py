@@ -1,7 +1,8 @@
-import random
+import random, ctypes
 from tkinter import *
 
-x = 1080 #x value defines your monitor's width
+x = 900 #x value defines cat's initial x axis position
+print(x)
 cycle = 0
 check = 1
 idle_num = [1, 2, 3, 4]
@@ -75,7 +76,7 @@ def update(cycle, check, event_number, x):
         cycle , event_number = gif_work(cycle, walk_negative, event_number, 1, 9)
         x -= -3
     
-    #"{window size} + {x size} + {height}", not an addition
+    #{window size} + {initial pos} + {y pos}
     window.geometry(f"100x100+{str(x)}+570")
     label.configure(image=frame)
     window.after(1, event, cycle, check, event_number, x)
